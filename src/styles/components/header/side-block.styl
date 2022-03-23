@@ -3,10 +3,21 @@
 	top 100%
 	left 0
 	width 90%
+	height: calc(100vh - 100%)
+	background-color: $white
+	display flex
+	flex-direction: column
+	border-bottom-right-radius: 8px
+	box-shadow: 0px 8px 16px rgba(176, 190, 197, 0.48);
+	display none
 
 	&__user-wrap
 		background linear-gradient(270deg, #0762C8 0%, #14AAD9 100%)
 		padding: 10px 16px
+		margin-bottom 28px
+		display flex
+		flex-direction: row
+		align-items: center
 
 	&__img
 		width 40px
@@ -15,3 +26,76 @@
 
 		& img
 			border-radius: inherit
+
+	&__text-content
+		flex: 1
+		display flex
+		flex-direction: column
+		margin-left 12px
+
+	&__text
+		font-weight 400
+		font-size: 16px
+		line-height 1.5
+		color $white
+
+	&__sub-text
+		font-weight 400
+		font-size 14px
+		line-height 1.5
+		color $white
+		opacity: 0.7
+
+	&__wrap-content
+		padding: 0 24px 30px
+		border-bottom: 1px solid $grey-light-200
+		margin-bottom 16px
+		display flex
+		flex-wrap: wrap
+		row-gap: 26px
+		column-gap: 24px
+
+	&__link
+		text-decoration: none
+		display inline-flex
+		align-items: center
+		font-weight 500
+		text-transform: uppercase
+		line-height 1.5
+		font-size: 14px
+		color $primary-green
+
+		& svg
+			fill: $primary-green
+
+	&__link--color
+		color $primary-blue
+
+		& svg
+			fill: $primary-blue
+
+	&__icon
+		display block
+		width 24px
+		height 24px
+		display flex
+		align-items: center
+		justify-content: center
+
+	&__link-text
+		margin-left 24px
+
+	&__btn-wrap
+		border-top: 1px solid $grey-light-200
+		padding: 16px 24px 13px
+		background: inherit
+		border-radius: inherit
+
+	&__btn
+		background: 0
+		border: 0
+		font-size 16px
+		font-weight 400
+		line-height 1.5
+		color $grey-dark
+		cursor pointer

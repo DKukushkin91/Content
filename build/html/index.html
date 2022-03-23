@@ -21,46 +21,66 @@
               </svg></a></div>
           <div class="header__side-block side-block">
             <div class="side-block__user-wrap">
-              <div class="side-block__img"><img src="/img/avatar.jpg" alt=""></div><span class="side-block__user">Оксана</span><span class="side-block__user-info">+7 (912) 60-60-606</span>
+              <div class="side-block__img"><img src="/img/avatar.jpg" width="40" height="40" alt=""></div>
+              <div class="side-block__text-content"><span class="side-block__text">Оксана</span><span class="side-block__sub-text">+7 (912) 60-60-606</span></div>
             </div>
-            <div class="side-block__wrap-content"><a class="side-block__link" href="#">
-                <svg width="undefined" height="undefined">
-                  <use href="/img/sprite.svg#icon-search"></use>
-                </svg></a><a class="side-block__link" href="#">
-                <svg width="undefined" height="undefined">
-                  <use href="/img/sprite.svg#icon-plus"></use>
-                </svg></a></div>
+            <div class="side-block__wrap-content"><a class="side-block__link" href="#"><span class="side-block__icon">
+                  <svg width="18" height="18">
+                    <use href="/img/sprite.svg#icon-search"></use>
+                  </svg></span><span class="side-block__link-text">Найти поездку</span></a><a class="side-block__link side-block__link--color" href="#"><span class="side-block__icon">
+                  <svg width="14" height="14">
+                    <use href="/img/sprite.svg#icon-plus"></use>
+                  </svg></span><span class="side-block__link-text">Создать поездку</span></a></div>
             <nav class="side-block__nav nav">
               <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
-                      <svg width="undefined" height="undefined">
+                      <svg width="18" height="16">
                         <use href="/img/sprite.svg#icon-auto"></use>
                       </svg></span><span class="nav__text">Водителю</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
-                      <svg width="undefined" height="undefined">
+                      <svg width="16" height="21">
                         <use href="/img/sprite.svg#icon-people"></use>
                       </svg></span><span class="nav__text">Пассажиру</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
-                      <svg width="undefined" height="undefined">
+                      <svg width="20" height="18">
                         <use href="/img/sprite.svg#icon-message"></use>
                       </svg></span><span class="nav__text">Сообщения</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
-                      <svg width="undefined" height="undefined">
+                      <svg width="22" height="21">
                         <use href="/img/sprite.svg#icon-star"></use>
                       </svg></span><span class="nav__text">Отзывы</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
-                      <svg width="undefined" height="undefined">
+                      <svg width="16" height="16">
                         <use href="/img/sprite.svg#icon-profile"></use>
                       </svg></span><span class="nav__text">Мой профиль</span></a></li>
               </ul>
             </nav>
-            <button class="side-block__btn">Выйти</button>
+            <div class="side-block__btn-wrap">
+              <button class="side-block__btn">Выйти</button>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="section"></section>
+      <section class="section-content">
+        <div class="section-content__container">
+          <div class="section-content__block">
+            <div class="section-content__wrap">
+              <h2 class="section-content__title">Создать поездку</h2>
+              <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда.</p>
+            </div>
+            <button class="section-content__btn">Создать</button>
+          </div>
+          <div class="section-content__block">
+            <div class="section-content__wrap">
+              <h2 class="section-content__title">Найти поездку</h2>
+              <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда. Выберите поездку, которая подходит именно вам! Если потребуется что-то уточнить, напишите водителю до бронирования места.</p>
+            </div>
+            <button class="section-content__btn section-content__btn--bg">Найти</button>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
