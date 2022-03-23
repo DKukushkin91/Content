@@ -1,0 +1,55 @@
+header.header
+	.header__container
+		.header__content
+			button.header__btn
+				span.header__btn-line
+				span.header__btn-line
+				span.header__btn-line
+			a.header__logo(href='#')
+				img(src="/img/logo.svg", alt="едем.рф")
+			.header__links
+				a.header__link(href='#')
+					+icon('message', '20', '18')
+				a.header__link(href='#')
+					+icon('bell', '16', '20')
+			.header__side-block.side-block
+				.side-block__user-wrap
+					.side-block__img
+						img(src="/img/avatar.jpg", alt="")
+					span.side-block__user Оксана
+					span.side-block__user-info +7 (912) 60-60-606
+				.side-block__wrap-content
+					a.side-block__link(href='#')
+						+icon('search')
+					a.side-block__link(href='#')
+						+icon('plus')
+				nav.side-block__nav.nav
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href='#')
+								span.nav__icon
+									+icon('auto')
+								span.nav__text Водителю
+						li.nav__item
+							a.nav__link(href='#')
+								span.nav__icon
+									+icon('people')
+								span.nav__text Пассажиру
+						li.nav__item
+							a.nav__link(href='#')
+								span.nav__icon
+									+icon('message')
+								span.nav__text Сообщения
+						li.nav__item
+							a.nav__link(href='#')
+								span.nav__icon
+									+icon('star')
+								span.nav__text Отзывы
+						li.nav__item
+							a.nav__link(href='#')
+								span.nav__icon
+									+icon('profile')
+								span.nav__text Мой профиль
+				button.side-block__btn Выйти
+
+
