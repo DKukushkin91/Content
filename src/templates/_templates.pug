@@ -1,0 +1,14 @@
+template.js-template
+	.form
+		form.form__element
+			fieldset.form__fieldset
+				button.form__close-btn.js-close-btn
+					+icon('cross', 14, 14)
+				legend.form__legend.js-legend
+				.form__input-wrap
+					input.form__input.js-calendar(type="text" placeholder='Дата выезда' readonly)
+					span.form__text Дата выезда
+				.form__input-wrap.form__input-wrap--margin
+					input.form__input.js-calendar(type="text" placeholder='Дата прибытия' readonly)
+					span.form__text Дата прибытия
+				button.form__btn.js-btn-text

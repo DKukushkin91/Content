@@ -35,6 +35,18 @@
 			transition: .2s ease all
 			border-radius: 2px
 
+	&__btn--open
+		& .header__btn-line:nth-child(1)
+			transform: rotate(45deg)
+			transform-origin: 0 15%
+
+		& .header__btn-line:nth-child(2)
+			opacity: 0
+
+		& .header__btn-line:nth-child(3)
+			transform: rotate(-45deg)
+			transform-origin: 15% 95%
+
 	&__logo
 		display block
 		max-width: 130px

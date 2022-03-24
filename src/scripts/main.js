@@ -1,3 +1,7 @@
+import { getBurgerMenu } from "./modules/burger-menu";
+import { popupForm } from "./modules/popup";
+
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('yep')
+  getBurgerMenu();
+	popupForm();
 });

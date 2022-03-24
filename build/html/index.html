@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Едем.рф</title>
     <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/vendor.css" type="text/css" rel="stylesheet">
   </head>
   <body lang="ru-RU">
     <header class="header">
       <div class="header__container">
         <div class="header__content">
-          <button class="header__btn"><span class="header__btn-line"></span><span class="header__btn-line"></span><span class="header__btn-line"></span></button><a class="header__logo" href="#"><img src="/img/logo.svg" alt="едем.рф"></a>
+          <button class="header__btn js-burger"><span class="header__btn-line"></span><span class="header__btn-line"></span><span class="header__btn-line"></span></button><a class="header__logo" href="#"><img src="/img/logo.svg" alt="едем.рф"></a>
           <div class="header__links"><a class="header__link" href="#">
               <svg width="20" height="18">
                 <use href="/img/sprite.svg#icon-message"></use>
@@ -19,7 +20,7 @@
               <svg width="16" height="20">
                 <use href="/img/sprite.svg#icon-bell"></use>
               </svg></a></div>
-          <div class="header__side-block side-block">
+          <div class="header__side-block side-block js-menu">
             <div class="side-block__user-wrap">
               <div class="side-block__img"><img src="/img/avatar.jpg" width="40" height="40" alt=""></div>
               <div class="side-block__text-content"><span class="side-block__text">Оксана</span><span class="side-block__sub-text">+7 (912) 60-60-606</span></div>
@@ -40,11 +41,11 @@
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
                       <svg width="16" height="21">
                         <use href="/img/sprite.svg#icon-people"></use>
-                      </svg></span><span class="nav__text">Пассажиру</span></a></li>
+                      </svg></span><span class="nav__text">Пассажиру</span><span class="notify">54</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
                       <svg width="20" height="18">
                         <use href="/img/sprite.svg#icon-message"></use>
-                      </svg></span><span class="nav__text">Сообщения</span></a></li>
+                      </svg></span><span class="nav__text">Сообщения</span><span class="notify">54</span></a></li>
                 <li class="nav__item"><a class="nav__link" href="#"><span class="nav__icon">
                       <svg width="22" height="21">
                         <use href="/img/sprite.svg#icon-star"></use>
@@ -70,17 +71,40 @@
               <h2 class="section-content__title">Создать поездку</h2>
               <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда.</p>
             </div>
-            <button class="section-content__btn">Создать</button>
+            <button class="section-content__btn js-popup-btn">Создать</button>
           </div>
           <div class="section-content__block">
             <div class="section-content__wrap">
               <h2 class="section-content__title">Найти поездку</h2>
               <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда. Выберите поездку, которая подходит именно вам! Если потребуется что-то уточнить, напишите водителю до бронирования места.</p>
             </div>
-            <button class="section-content__btn section-content__btn--bg">Найти</button>
+            <button class="section-content__btn section-content__btn--bg js-popup-btn">Найти</button>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <template class="js-template">
+    <div class="form">
+      <form class="form__element">
+        <fieldset class="form__fieldset">
+          <button class="form__close-btn js-close-btn">
+            <svg width="14" height="14">
+              <use href="/img/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <legend class="form__legend js-legend"></legend>
+          <div class="form__input-wrap">
+            <input class="form__input js-calendar" type="text" placeholder="Дата выезда" readonly><span class="form__text">Дата выезда</span>
+          </div>
+          <div class="form__input-wrap form__input-wrap--margin">
+            <input class="form__input js-calendar" type="text" placeholder="Дата прибытия" readonly><span class="form__text">Дата прибытия</span>
+          </div>
+          <button class="form__btn js-btn-text"></button>
+        </fieldset>
+      </form>
+    </div>
+  </template>
+  <script src="/scripts/vendor.js" type="text/javascript"></script>
+  <script src="../scripts/main.js" type="text/javascript"></script>
 </html>

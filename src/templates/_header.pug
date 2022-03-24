@@ -1,7 +1,7 @@
 header.header
 	.header__container
 		.header__content
-			button.header__btn
+			button.header__btn.js-burger
 				span.header__btn-line
 				span.header__btn-line
 				span.header__btn-line
@@ -12,7 +12,7 @@ header.header
 					+icon('message', '20', '18')
 				a.header__link(href='#')
 					+icon('bell', '16', '20')
-			.header__side-block.side-block
+			.header__side-block.side-block.js-menu
 				.side-block__user-wrap
 					.side-block__img
 						img(src="/img/avatar.jpg", width='40', height='40' alt="")
@@ -40,11 +40,13 @@ header.header
 								span.nav__icon
 									+icon('people', 16, 21)
 								span.nav__text Пассажиру
+								include _notify
 						li.nav__item
 							a.nav__link(href='#')
 								span.nav__icon
 									+icon('message', 20, 18)
 								span.nav__text Сообщения
+								include _notify
 						li.nav__item
 							a.nav__link(href='#')
 								span.nav__icon
