@@ -7,13 +7,22 @@
 	&__container
 		width 100%
 		margin: 0 auto
-		max-width: 1200px
+		max-width: 1256px
 		padding: 0 20px
+
+		@media $lg
+			padding 0
 
 	&__content
 		display flex
 		align-items: center
 		padding: 12px 0
+
+		@media $lg
+			padding 28px
+			display grid
+			grid-template-columns: auto auto 1fr auto auto
+			column-gap: 16px
 
 	&__btn
 		background: 0
@@ -25,6 +34,9 @@
 		flex-direction: column
 		justify-content: space-between
 		margin-right 19px
+
+		@media $lg
+			display none
 
 		& .header__btn-line
 			background-color: $grey-dark
@@ -49,18 +61,83 @@
 
 	&__logo
 		display block
-		max-width: 130px
+		width: 130px
 		margin-right: auto
+
+		@media $lg
+			margin 0
+			width: 164px
+
+	&__text
+		display none
+
+		@media $lg
+			display block
+			font-size 12px
+			line-height 1.4
+			color $grey-light
+			font-weight 400
+			max-width: 137px
+
+	&__wrap-links
+		display none
+
+		@media $lg
+			display inline-flex
+			align-items: center
+			justify-content: center
+
+	&__link
+		@media $lg
+			display flex
+			align-items: center
+			text-decoration: none
+			fill: $primary-green
+			color $primary-green
+
+			&:not(:last-child)
+				margin-right 35px
+
+	&__link-text
+		text-transform: uppercase
+		font-size 14px
+		line-height 1.4
+		font-weight 500
+
+	&__link--color
+		fill: $primary-blue
+		color: $primary-blue
+
+	&__icon
+		fill: inherit
+		width 18px
+		height 18px
+		margin-right 8px
+		display flex
+		align-items: center
+		justify-content: center
+
+	&__icon--size
+		width 14px
+		height 14px
 
 	&__links
 		display flex
 
-	&__link
+		@media $lg
+			margin-left 29px
+
+	&__icon-link
 		display block
 		line-height 0
+		position relative
 
 		& svg
 			fill: $grey-light
 
 		&:not(:last-child)
 			margin-right 30px
+
+		& .notify
+			left: calc(50% - 2px)
+			bottom: calc(100% - 10px)

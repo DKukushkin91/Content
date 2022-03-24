@@ -28,10 +28,11 @@ export const popupForm = () => {
 
 		const getElement = (target) => {
 			const template = popupTemplate.cloneNode(true);
-			const sendBtn = template.querySelector('.js-btn-text');
+			const sendBtn = template.querySelector('.js-send-btn');
 			const legend = template.querySelector('.js-legend');
 			const closeBtn = template.querySelector('.js-close-btn');
 			const calendar = template.querySelectorAll('.js-calendar');
+			const popupForm = template.querySelector('.form__element');
 
 			sendBtn.textContent = target.textContent;
 			legend.textContent = target.textContent;
@@ -44,17 +45,21 @@ export const popupForm = () => {
 				new AirDatepicker(el, {
 					minDate: new Date(),
 					autoClose: true,
+					container: template.querySelector('.form__element'),
 					position: 'bottom center',
+
 					onSelect({formattedDate}){
-						el.setAttribute('data-date', `${formattedDate}`)
-						if(el.dataset.length !== 0) {
+						el.value = `${formattedDate}` === 'undefined' ? `` : `${formattedDate}`;
+
+						if(el.value.length !== 0 || el.value !== 'undefined') {
 							el.parentNode.querySelector('.form__text').style.display = 'block';
 						}
-					}
+					},
 				})
 			})
 
 			closeBtn.addEventListener('click', elementRemoveHandler);
+			popupForm.addEventListener('submit', validateForm);
 			return template
 		}
 
@@ -70,7 +75,29 @@ export const popupForm = () => {
 		}
 
 		buttons.forEach(el => el.addEventListener('click', (evt) => {
-			appendElement(evt.target);
+			const form = document.querySelector('.form');
+
+			if(!form){
+				appendElement(evt.target);
+			}
 		}))
+
+		const validateForm = (evt) => {
+			const form = evt.target;
+			const field = Array.from(form.querySelectorAll('input'));
+
+			field.forEach(el => {
+				if(el.value !== '' || el.value !== undefined) {
+					el.parentElement.classList.remove('.form__input-wrap--invalid');
+				}
+			})
+
+			field.forEach(el => {
+				if(el.value === '' || el.value === undefined){
+					evt.preventDefault();
+					el.parentElement.classList.add('form__input-wrap--invalid');
+				}
+			})
+		}
 	}
 }

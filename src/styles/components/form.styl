@@ -16,11 +16,25 @@
 	&__element
 		position relative
 		display block
-		width 100%
-		max-width: calc(100% - 32px)
+		width calc(100% - 32px)
+		max-width: 360px
 		background $white
 		border-radius: 10px
 		padding: 16px 16px 24px
+
+		@media $lg
+			padding: 16px 24px 24px
+
+		//styles for datepicker
+		& .air-datepicker-nav--title
+			color $primary-blue !important
+
+		& .air-datepicker-cell.-current-
+			color $primary-green !important
+
+		& .air-datepicker-body--day-name
+			color $primary-blue !important
+		//
 
 	&__fieldset
 		border: 0
@@ -63,6 +77,12 @@
 		width 100%
 		margin-bottom 16px
 
+	&__input-wrap--invalid
+		border-color: $primary-orange
+
+		& .form__text-err
+			display block
+
 	&__input-wrap--margin
 		margin-bottom 24px
 
@@ -97,6 +117,18 @@
 		transform: translateY(50%)
 		display none
 
+	&__text-err
+		font-size 12px
+		line-height 1
+		color $primary-orange
+		position absolute
+		top: calc(100% - 2px)
+		left: 24px
+		transform: translateY(-50%)
+		padding: 5px
+		background-color: $white
+		display none
+
 	&__btn
 		font-size 16px
 		line-height 1.5
@@ -110,16 +142,11 @@
 		text-transform: uppercase
 		cursor pointer
 
+		&:hover
+			background-color: $blue-dark
+
 	&__btn--color
 		background-color: $primary-green
 
-//styles for datepicker
-.air-datepicker-nav--title
-	color $primary-blue !important
-
-.air-datepicker-cell.-current-
-	color $primary-green !important
-
-.air-datepicker-body--day-name
-	color $primary-blue !important
-//
+		&:hover
+			background-color: $green-dark

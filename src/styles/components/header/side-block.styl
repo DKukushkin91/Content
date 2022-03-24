@@ -5,6 +5,7 @@
 	top 100%
 	left 0
 	width 90%
+	max-width: 416px
 	height: calc(100vh - 100%)
 	background-color: $white
 	border-bottom-right-radius: 8px
@@ -12,6 +13,15 @@
 	transform: translateX(-200%)
 	transition: 1s ease transform 0s
 	overflow: auto
+
+	@media $lg
+		position static
+		height auto
+		width fit-content
+		transform: translateX(0)
+		box-shadow: none
+		border-radius: 0
+		margin-left 11px
 
 	&--active
 		transform: translateX(0%)
@@ -24,6 +34,12 @@
 		flex-direction: row
 		align-items: center
 
+		@media $lg
+			background: 0
+			margin 0
+			padding 0
+			cursor pointer
+
 	&__img
 		width 40px
 		height 40px
@@ -31,6 +47,13 @@
 
 		& img
 			border-radius: inherit
+			height 100%
+			object-fit: cover
+
+
+		@media $lg
+			width 32px
+			height 32px
 
 	&__text-content
 		flex: 1
@@ -38,11 +61,27 @@
 		flex-direction: column
 		margin-left 12px
 
+		@media $lg
+			flex-direction: row
+			margin-left 8px
+
+		& .side-block__icon
+			display none
+
+			@media $lg
+				display block
+				fill: $grey-light
+				margin-left 12px
+
 	&__text
 		font-weight 400
 		font-size: 16px
 		line-height 1.5
 		color $white
+
+		@media $lg
+			color $grey-dark
+			font-size 14px
 
 	&__sub-text
 		font-weight 400
@@ -50,6 +89,9 @@
 		line-height 1.5
 		color $white
 		opacity: 0.7
+
+		@media $lg
+			display none
 
 	&__wrap-content
 		padding: 0 24px 30px
@@ -59,6 +101,9 @@
 		flex-wrap: wrap
 		row-gap: 26px
 		column-gap: 24px
+
+		@media $lg
+			display none
 
 	&__link
 		text-decoration: none
@@ -95,6 +140,9 @@
 		padding: 16px 24px 13px
 		background: inherit
 		border-radius: inherit
+
+		@media $lg
+			display none
 
 	&__btn
 		background: 0

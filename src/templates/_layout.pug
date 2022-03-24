@@ -11,11 +11,13 @@ html(lang='ru')
 		link(href=`../css/vendor.css` type="text/css" rel="stylesheet")
 
 	body(lang='ru-RU')
-		include ./_header
+		.fix
+			.fix__content
+				include ./_header
+				main.main
+					block page
 
-		main.main
-			block page
-
+			include ./_footer
 	include ./_templates
 
 	script(src=`/scripts/vendor.js` type="text/javascript")

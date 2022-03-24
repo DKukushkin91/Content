@@ -3,9 +3,12 @@
 
 	&__container
 		width 100%
-		max-width 1200px
+		max-width 888px
 		padding: 16px
 		margin: 0 auto
+
+		@media $md
+			padding: 24px
 
 	&__block
 		width 100%
@@ -18,8 +21,56 @@
 		&:not(:last-child)
 			margin-bottom 16px
 
+			@media $lg
+				margin-bottom 25px
+
+		@media $md
+			display flex
+			flex-direction: row
+			flex-wrap: wrap
+			align-items: center
+			justify-content: space-between
+
+		@media $lg
+			padding: 32px 48px
+			min-height 148px
+
 	&__wrap
-		padding-bottom 16px
+		padding-bottom 18px
+
+		@media $md
+			max-width: 79%
+			padding 0
+			padding-right 20px
+			text-align: left
+			align-self: flex-start
+
+	&__title-wrap
+		@media $md
+			display inline-flex
+			align-items: center
+			padding-bottom 16px
+
+	&__icon
+		display none
+
+		& svg
+			fill: $primary-blue
+
+		@media $md
+			margin-right 13px
+			width 14px
+			height 14px
+			display flex
+			align-items: center
+			justify-content: center
+
+	&__icon--color
+		width 17px
+		height 17px
+
+		& svg
+			fill: $primary-green
 
 	&__title
 		font-family $Montserrat
@@ -29,10 +80,13 @@
 		padding-bottom 8px
 		color: $grey-dark
 
+		@media $md
+			padding-bottom 0
+
 	&__text
 		font-weight 400
 		font-size 14px
-		line-height 1.5
+		line-height 1.4
 		color $primary-grey
 
 	&__btn
@@ -46,8 +100,17 @@
 		padding: 12px
 		cursor pointer
 		width 100%
-		max-width: 320px
+		max-width: 240px
 		text-transform: uppercase
+
+		&:hover
+			background-color: $blue-dark
+
+		@media $md
+			max-width: 140px
 
 	&__btn--bg
 		background $primary-green
+
+		&:hover
+			background-color: $green-dark

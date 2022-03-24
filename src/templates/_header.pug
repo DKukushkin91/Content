@@ -7,11 +7,22 @@ header.header
 				span.header__btn-line
 			a.header__logo(href='#')
 				img(src="/img/logo.svg", alt="едем.рф")
+			span.header__text Совместные поездки на автомобиле
+			.header__wrap-links
+				a.header__link(href='#')
+					span.header__icon
+						+icon('search', 18, 18)
+					span.header__link-text Найти поездку
+				a.header__link.header__link--color(href='#')
+					span.header__icon.header__icon--size
+						+icon('plus', 14, 14)
+					span.header__link-text Создать поездку
 			.header__links
-				a.header__link(href='#')
+				a.header__icon-link(href='#')
 					+icon('message', '20', '18')
-				a.header__link(href='#')
+				a.header__icon-link(href='#')
 					+icon('bell', '16', '20')
+					include _notify
 			.header__side-block.side-block.js-menu
 				.side-block__user-wrap
 					.side-block__img
@@ -19,6 +30,8 @@ header.header
 					.side-block__text-content
 						span.side-block__text Оксана
 						span.side-block__sub-text +7 (912) 60-60-606
+						span.side-block__icon
+							+icon('arrow', 12, 9)
 				.side-block__wrap-content
 					a.side-block__link(href='#')
 						span.side-block__icon
