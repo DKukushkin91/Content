@@ -82,13 +82,10 @@
 
 	&__input-wrap
 		position relative
-		border: 1px solid $blue-light
-		border-radius: 24px
 		width 100%
 		margin-bottom 16px
 
 	&__input-wrap--invalid
-		border-color: $primary-orange
 		margin-bottom 0
 
 		& + .form__text-err
@@ -97,6 +94,9 @@
 
 		&.form__input-wrap--margin
 			margin-bottom 0
+
+		& .form__input
+			border-color: $primary-orange
 
 	&__input-wrap--margin
 		margin-bottom 24px
@@ -113,9 +113,12 @@
 		line-height 1.5
 		color: $grey-dark
 		font-weight 400
+		border: 1px solid $blue-light
+		border-radius: 24px
 
 		&:focus
 			outline: none
+			border-color: $blue-light
 
 		&::placeholder
 			color $grey-light
