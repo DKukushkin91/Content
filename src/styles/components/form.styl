@@ -1,7 +1,5 @@
 .form
-	display flex
-	align-items: center
-	justify-content: center
+	display block
 	background-color: rgba(59, 81, 114, 0.8)
 	z-index 99
 	position fixed
@@ -12,10 +10,18 @@
 	bottom 0
 	left 0
 	overflow: auto
+	text-align: center
+
+	&::before
+		content: ''
+		height: 100%
+		display inline-block
+		vertical-align: middle
 
 	&__element
 		position relative
-		display block
+		display inline-block
+		vertical-align: middle
 		width calc(100% - 32px)
 		max-width: 360px
 		background $white
@@ -70,6 +76,10 @@
 		width 100%
 		max-width: 85%
 
+	&__content-wrap
+		width 100%
+		position relative
+
 	&__input-wrap
 		position relative
 		border: 1px solid $blue-light
@@ -79,12 +89,20 @@
 
 	&__input-wrap--invalid
 		border-color: $primary-orange
+		margin-bottom 0
 
-		& .form__text-err
+		& + .form__text-err
 			display block
+			margin-bottom 16px
+
+		&.form__input-wrap--margin
+			margin-bottom 0
 
 	&__input-wrap--margin
 		margin-bottom 24px
+
+	&__input-wrap--margin + .form__text-err
+		margin-bottom 16px
 
 	&__input
 		width 100%
@@ -95,6 +113,9 @@
 		line-height 1.5
 		color: $grey-dark
 		font-weight 400
+
+		&:focus
+			outline: none
 
 		&::placeholder
 			color $grey-light
@@ -121,13 +142,10 @@
 		font-size 12px
 		line-height 1
 		color $primary-orange
-		position absolute
-		top: calc(100% - 2px)
-		left: 24px
-		transform: translateY(-50%)
-		padding: 5px
+		padding: 5px 24px
 		background-color: $white
 		display none
+		text-align: left
 
 	&__btn
 		font-size 16px

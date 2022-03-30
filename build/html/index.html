@@ -86,7 +86,7 @@
                       </svg></span>
                     <h2 class="section-content__title">Создать поездку</h2>
                   </div>
-                  <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда.</p>
+                  <p class="section-content__text js-formatting-text">Просто укажите города отправления и прибытия, а также время выезда.</p>
                 </div>
                 <button class="section-content__btn js-popup-btn">Создать</button>
               </div>
@@ -98,7 +98,7 @@
                       </svg></span>
                     <h2 class="section-content__title">Найти поездку</h2>
                   </div>
-                  <p class="section-content__text">Просто укажите города отправления и прибытия, а также время выезда. Выберите поездку, которая подходит именно вам! Если потребуется что-то уточнить, напишите водителю до бронирования места.</p>
+                  <p class="section-content__text js-formatting-text">Просто укажите города отправления и прибытия, а также время выезда. Выберите поездку, которая подходит именно вам! Если потребуется что-то уточнить, напишите водителю до бронирования места.</p>
                 </div>
                 <button class="section-content__btn section-content__btn--bg js-popup-btn">Найти</button>
               </div>
@@ -119,11 +119,15 @@
             </svg>
           </button>
           <legend class="form__legend js-legend"></legend>
-          <div class="form__input-wrap">
-            <input class="form__input js-calendar" type="text" placeholder="Дата выезда" required readonly><span class="form__text">Дата выезда</span><span class="form__text-err">Обязательно поле</span>
+          <div class="form__content-wrap">
+            <div class="form__input-wrap">
+              <input class="form__input js-calendar" type="text" placeholder="Дата выезда" required readonly><span class="form__text">Дата выезда</span>
+            </div><span class="form__text-err">Обязательно поле</span>
           </div>
-          <div class="form__input-wrap form__input-wrap--margin">
-            <input class="form__input js-calendar" type="text" placeholder="Дата прибытия" required readonly><span class="form__text">Дата прибытия</span><span class="form__text-err">Обязательно поле</span>
+          <div class="form__content-wrap">
+            <div class="form__input-wrap form__input-wrap--margin">
+              <input class="form__input js-calendar" type="text" placeholder="Дата прибытия" required readonly><span class="form__text">Дата прибытия</span>
+            </div><span class="form__text-err">Обязательно поле</span>
           </div>
           <button class="form__btn js-send-btn"></button>
         </fieldset>
