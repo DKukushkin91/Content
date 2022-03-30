@@ -3,7 +3,7 @@ export const textFormatting = () => {
 		const MAX_LENGTH = 154;
 		const DESKTOP_WIDTH = 1024;
 		const texts = document.querySelectorAll('.js-formatting-text');
-		const orientationHandler = window.matchMedia('(max-width: 1024px)');
+		const widthHandler = window.matchMedia('(max-width: 1024px)');
 
 		const getFormattingText = () => {
 			texts.forEach(el => {
@@ -15,7 +15,7 @@ export const textFormatting = () => {
 			});
 		}
 
-		orientationHandler.addEventListener('change', (e) => {
+		widthHandler.addEventListener('change', (e) => {
 			if(e.matches) {
 				texts.forEach(el => el.textContent);
 				document.location.reload()
