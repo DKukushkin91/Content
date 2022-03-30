@@ -15,13 +15,7 @@ export const textFormatting = () => {
 			});
 		}
 
-		widthHandler.addEventListener('change', (e) => {
-			if(e.matches) {
-				document.location.reload()
-			}else{
-				getFormattingText();
-			}
-		})
+		widthHandler.addEventListener('change', (e) => e.matches ? document.location.reload() : getFormattingText());
 
 		getFormattingText();
 	}
