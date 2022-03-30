@@ -17,7 +17,6 @@ export const textFormatting = () => {
 
 		widthHandler.addEventListener('change', (e) => {
 			if(e.matches) {
-				texts.forEach(el => el.textContent);
 				document.location.reload()
 			}else{
 				getFormattingText();
